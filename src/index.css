@@ -18,6 +18,10 @@
   --alt: #aec3b0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Tailwind v4 automatically handles the .dark selector if you use variables */
 .dark {
   --bg-color: #01161e;   /* Dark Navy */
@@ -75,6 +79,13 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.holtwood-one-sc-regular {
+  font-family: "Holtwood One SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 /* toggle btn */ 
