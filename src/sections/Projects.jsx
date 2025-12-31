@@ -14,6 +14,9 @@ import tailwind from "../assets/skills/icons8-tailwindcss-100.png"
 import fMotion from "../assets/skills/motion.svg"
 import socketio from "../assets/skills/socketio.svg"
 import gsapIcon from "../assets/skills/gsapp.png"
+import html from "../assets/skills/icons8-html-100.png"
+import css from "../assets/skills/icons8-css-100.png"
+import scss from "../assets/skills/scss-svgrepo-com.svg"
 
 const Projects = () => {
   const scrollContainerRef = useRef(null);
@@ -102,7 +105,7 @@ const projects = [
   {
     id: 3,
     url: novaImg,
-    title: "E-Commerce Platform",
+    title: "Responsive Portfolio",
     about: "A comprehensive e-commerce solution with user authentication, payment integration, inventory management, and admin dashboard for complete online store management.",
     liveUrl: "https://ecommerce-demo.com",
     githubUrl: "https://github.com/yourusername/ecommerce",

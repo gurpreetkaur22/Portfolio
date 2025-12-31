@@ -1,6 +1,17 @@
 import React from 'react'
+import Button from './Button'
+import Button2 from './Button2'
 
 const ProjectCard = ({ project }) => {
+    
+    const handleLiveDemo = () => {
+        window.open(project.liveUrl, '_blank')
+    }
+    
+    const handleGithub = () => {
+        window.open(project.githubUrl, '_blank')
+    }
+
     return (
 
        <div className='flex gap-5'>
@@ -10,7 +21,7 @@ const ProjectCard = ({ project }) => {
          <div className="flex flex-col gap-2 ">
 
             <div className='flex gap-10'>
-                <div className="relative mb-4">
+                <div className="relative">
                    
                     <img
                         className="h-96 w-198 object-cover rounded-xl shadow-lg"
@@ -59,24 +70,10 @@ const ProjectCard = ({ project }) => {
                     {/* Project Links */}
                     <div className="flex gap-4 pt-2">
                         {project.liveUrl && (
-                            <a
-                                href={project.liveUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-4 py-2 bg-accent text-primary rounded-md text-sm nunito-bold hover:bg-opacity-90 transition-colors"
-                            >
-                                Live Demo
-                            </a>
+                            <Button text="Live Demo" onClick={handleLiveDemo} />
                         )}
                         {project.githubUrl && (
-                            <a
-                                href={project.githubUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-4 py-2 border border-accent text-accent rounded-md text-sm nunito-bold hover:bg-accent hover:text-primary transition-colors"
-                            >
-                                GitHub
-                            </a>
+                            <Button2 text="Github" onClick={handleGithub}  />
                         )}
                     </div>
                 </div>
