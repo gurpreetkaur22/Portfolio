@@ -16,6 +16,9 @@ import socketio from "../assets/skills/socketio.svg"
 import gsapIcon from "../assets/skills/gsapp.png"
 
 const Projects = () => {
+  console.log('Projects component rendering')
+  console.log('Projects data:', projects)
+  
   const scrollContainerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
