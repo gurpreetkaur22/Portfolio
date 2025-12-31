@@ -41,7 +41,7 @@ const Projects = () => {
           <FaArrowTrendDown className="text-5xl text-secondary ml-4" />
         </div>
 
-        <div className="overflow-hidden w-full h-5/6 pt-5">
+        <div className="overflow-hidden w-full h-6/6 pt-5">
           <motion.div
             className="flex items-center h-screen px-10 will-change-transform pl-[20%]"
             style={{
@@ -89,7 +89,7 @@ const projects = [
     id: 2,
     url: liveInPaintsImg,
     title: "Live In Paints",
-    about: "An interactive painting and art showcase platform where artists can display their work, connect with clients, and manage their portfolio with a beautiful, responsive design.",
+    about: "LiveInPaints is a responsive, animation-rich frontend project built during the Sheryians Coding School Hackathon. It secured 5th place among 350+ participants and was featured on Sheryians’ YouTube channel.",
     liveUrl: "https://live-in-paints.vercel.app/",
     githubUrl: "https://github.com/gurpreetkaur22/LiveInPaints",
     skills: [

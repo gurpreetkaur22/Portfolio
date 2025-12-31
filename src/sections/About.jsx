@@ -99,7 +99,7 @@ const About = () => {
   }, [])
 
   return (
-    <div id="about" className='about-section sticky z-1 top-0 h-screen flex flex-col justify-center items-center gap-10  overflow-hidden'>
+    <div id="about" className='about-section sticky z-1 top-0 -pt-10 h-screen flex flex-col justify-center items-center gap-10 overflow-hidden'>
       <div className='circle absolute bg-alt -z-50'></div>
       <div className='flex justify-center gap-6 w-full px-150 text-secondary text-6xl bbh-bogle-regular tracking-wide text-center'>
         <h1 className='about-left text-left'>About</h1>
@@ -112,8 +112,8 @@ const About = () => {
       </h1>
       <HashLink smooth to="#projects"><Button/></HashLink>
       <RiTailwindCssFill className='img absolute text-accent w-15 h-15 bottom-10 opacity-50' />
-      <FaReact className='img absolute text-accent w-15 h-15 left-30 top-30 opacity-50' />
-      <SiMongodb className='img absolute text-accent w-15 h-15 right-30 top-30 opacity-50' />
+      <FaReact className='img absolute text-accent w-15 h-15 left-30 top-20 opacity-50' />
+      <SiMongodb className='img absolute text-accent w-15 h-15 right-30 top-20 opacity-50' />
       <SiExpress className='img absolute text-accent w-15 h-15 right-50 bottom-15 opacity-50' />
       <FaNodeJs className='img absolute text-accent w-15 h-15 left-50 bottom-15 opacity-50' />
     </div>
