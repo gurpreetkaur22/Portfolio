@@ -99,9 +99,9 @@ const About = () => {
   }, [])
 
   return (
-    <div id="about" className='about-section sticky z-1 top-0 h-screen pt-8 flex flex-col justify-start items-center gap-10 relative overflow-hidden'>
+    <div id="about" className='about-section sticky z-1 top-0 h-screen flex flex-col justify-center items-center gap-10  overflow-hidden'>
       <div className='circle absolute bg-alt -z-50'></div>
-      <div className='flex justify-center gap-6 w-full px-150 pt-10 text-secondary text-6xl bbh-bogle-regular tracking-wide text-center'>
+      <div className='flex justify-center gap-6 w-full px-150 text-secondary text-6xl bbh-bogle-regular tracking-wide text-center'>
         <h1 className='about-left text-left'>About</h1>
         <h1 className='about-right text-right'>Section</h1>
       </div>

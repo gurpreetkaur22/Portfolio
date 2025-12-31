@@ -6,7 +6,6 @@ import Projects from './sections/Projects'
 import TechStack from './sections/TechStack'
 import Contact from './sections/Contact'
 import Loader from './components/Loader'
-import Testimonials from './sections/Testimonials'
 
 const App = () => {
 
@@ -22,7 +21,6 @@ const App = () => {
         <Hero />
         <About />
         <Projects />
-        <Testimonials/>
         <TechStack />
         <Contact />
       </main>
