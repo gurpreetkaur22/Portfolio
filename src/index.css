@@ -139,3 +139,24 @@ body {
 .toggle:checked + .slider:before {
   transform: translateX(32px);
 }
+
+
+/* Projects */
+
+.preview-img img {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.video-wrapper {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.item .preview-img img:hover {
+  opacity: 0;
+}
+
+.item .video-wrapper:hover {
+  opacity: 1;
+}

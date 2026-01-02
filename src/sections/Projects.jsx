@@ -1,22 +1,33 @@
 import { useRef } from "react";
 import { FaArrowTrendDown } from "react-icons/fa6";
-import novaImg from "../assets/nova.png";
-import liveInPaintsImg from "../assets/liveinpaints.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 
 // Import skill icons
-import express from "../assets/skills/icons8-express-js-100.png"
-import react from "../assets/skills/icons8-react-100.png"
-import mongodb from "../assets/skills/icons8-mongodb-100.png"
-import node from "../assets/skills/icons8-nodejs-100.png"
-import tailwind from "../assets/skills/icons8-tailwindcss-100.png"
+import express from "../assets/skills/express.svg"
+import react from "../assets/skills/react.svg"
+import mongodb from "../assets/skills/mongodb.svg"
+import node from "../assets/skills/nodejs.svg"
+import tailwind from "../assets/skills/tailwindcss.svg"
 import fMotion from "../assets/skills/motion.svg"
 import socketio from "../assets/skills/socketio.svg"
 import gsapIcon from "../assets/skills/gsapp.png"
-import html from "../assets/skills/icons8-html-100.png"
-import css from "../assets/skills/icons8-css-100.png"
+import html from "../assets/skills/html.svg"
+import css from "../assets/skills/css.svg"
+import js from "../assets/skills/javascript.svg"
 import scss from "../assets/skills/scss-svgrepo-com.svg"
+
+import novaImg from "../assets/nova.png";
+import liveInPaintsImg from "../assets/liveinpaints.png";
+import portfolioResponsive from "../assets/portfolioResponsive.png";
+import fylla from "../assets/fylla.png";
+import productDesigner from "../assets/productDesigner.png";
+
+import novaai from "../assets/videos/novaai.mp4"
+import liveinpaintsV from "../assets/videos/liveinpaints.mp4"
+import firstPortfolioV from "../assets/videos/firstPortfolio.mp4"
+import fyllaV from "../assets/videos/fylla.mp4"
+import productDesignerV from "../assets/videos/productDesigner.mp4"
 
 const Projects = () => {
   const scrollContainerRef = useRef(null);
@@ -44,7 +55,7 @@ const Projects = () => {
           <FaArrowTrendDown className="text-5xl text-secondary ml-4" />
         </div>
 
-        <div className="overflow-hidden w-full h-6/6 pt-5">
+        <div className="overflow-hidden w-full h-6/6 pt-7">
           <motion.div
             className="flex items-center h-screen px-10 will-change-transform pl-[20%]"
             style={{
@@ -76,6 +87,7 @@ const projects = [
   {
     id: 1,
     url: novaImg,
+    video: novaai,
     title: "Nova AI",
     about: "A modern, full-stack AI chat application built with React and Node.js, featuring real-time messaging, user authentication, and an intuitive interface for seamless AI conversations.",
     liveUrl: "https://novaai-1-93pi.onrender.com",
@@ -86,11 +98,13 @@ const projects = [
       { name: "Express.js", icon: express },
       { name: "MongoDB", icon: mongodb },
       { name: "SocketIO", icon: socketio },
+      { name: "Tailwind CSS", icon: tailwind },
     ]
   },
   {
     id: 2,
     url: liveInPaintsImg,
+    video: liveinpaintsV,
     title: "Live In Paints",
     about: "LiveInPaints is a responsive, animation-rich frontend project built during the Sheryians Coding School Hackathon. It secured 5th place among 350+ participants and was featured on Sheryians’ YouTube channel.",
     liveUrl: "https://live-in-paints.vercel.app/",
@@ -104,31 +118,45 @@ const projects = [
   },
   {
     id: 3,
-    url: novaImg,
+    url: portfolioResponsive,
+    video: firstPortfolioV,
     title: "Responsive Portfolio",
-    about: "A comprehensive e-commerce solution with user authentication, payment integration, inventory management, and admin dashboard for complete online store management.",
-    liveUrl: "https://ecommerce-demo.com",
-    githubUrl: "https://github.com/yourusername/ecommerce",
+    about: "A clean, responsive personal portfolio built using HTML, CSS, and SCSS to practice layout structuring, typography, and modern UI design principles across devices.",
+    liveUrl: "https://gurpreetkaur22.github.io/Responsive-Portfolio/",
+    githubUrl: "https://github.com/gurpreetkaur22/Responsive-Portfolio",
     skills: [
-      { name: "React", icon: react },
-      { name: "Express.js", icon: express },
-      { name: "MongoDB", icon: mongodb },
-      { name: "Node.js", icon: node },
-      { name: "Tailwind CSS", icon: tailwind }
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "SCSS", icon: scss },
     ]
   },
   {
     id: 4,
-    url: liveInPaintsImg,
-    title: "Task Management App",
-    about: "A collaborative task management application with real-time updates, team collaboration features, project tracking, and intuitive drag-and-drop functionality.",
-    liveUrl: "https://taskmanager-demo.com",
-    githubUrl: "https://github.com/yourusername/taskmanager",
+    url: fylla,
+    video: fyllaV,
+    title: "Fylla Clone",
+    about: "A fully responsive UI clone built using HTML, CSS, and SCSS, focused on layout accuracy, typography, spacing, and modern design responsiveness.",
+    liveUrl: "https://gurpreetkaur22.github.io/Fylla/",
+    githubUrl: "https://github.com/gurpreetkaur22/Fylla",
     skills: [
-      { name: "React", icon: react },
-      { name: "Framer Motion", icon: fMotion },
-      { name: "Express.js", icon: express },
-      { name: "MongoDB", icon: mongodb }
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "SCSS", icon: scss },
+    ]
+  },
+  {
+    id: 5,
+    url: productDesigner,
+    video: productDesignerV,
+    title: "Product Designer",
+    about: "An interactive website clone built using HTML, CSS, and JavaScript, featuring GSAP animations, a custom cursor-follow effect, hover-based image reveals, and Locomotive Scroll for smooth scrolling.",
+    liveUrl: "https://gurpreetkaur22.github.io/Product-Designer/",
+    githubUrl: "https://github.com/gurpreetkaur22/Product-Designer",
+    skills: [
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "JavaScript", icon: js },
+      { name: "GSAP", icon: gsapIcon },
     ]
   },
 ];

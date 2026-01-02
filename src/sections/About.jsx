@@ -37,6 +37,7 @@ const About = () => {
           start: "top bottom",
           end: "bottom top",
           scrub: 1.1,
+          fastScrollEnd: true,
         }
       },
     )
@@ -52,6 +53,7 @@ const About = () => {
           start: "top 85%",
           end: "top 40%",
           scrub: 0.8,
+          fastScrollEnd: true,
         },
       }
     );
@@ -67,6 +69,7 @@ const About = () => {
           start: "top 85%",
           end: "top 40%",
           scrub: 0.8,
+          fastScrollEnd: true,
         },
       }
     );
@@ -83,6 +86,7 @@ const About = () => {
         start: 'top 75%',
         end: 'center center',
         scrub: 0.5,
+        fastScrollEnd: true,
       }
     });
 
@@ -93,9 +97,15 @@ const About = () => {
         trigger: "#about",
         start: 'top 75%',
         end: 'center center',
-        scrub: 0.5
+        scrub: 0.5,
+        fastScrollEnd: true,
       }
     })
+
+    // Cleanup function to kill ScrollTrigger instances
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, [])
 
   return (
