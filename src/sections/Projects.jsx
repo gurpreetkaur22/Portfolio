@@ -40,7 +40,7 @@ const Projects = () => {
   // Horizontal scroll transforms for different screen sizes
   const xMobile = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-300%"]);
   const xTablet = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-200%"]);
-  const xDesktop = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-450%"]);
+  const xDesktop = useTransform(scrollYProgress, [0.1, 0.9], ["0%", "-335%"]);
 
   return (
     <div ref={scrollContainerRef} className="relative h-[700vh] z-2">
