@@ -30,12 +30,12 @@ gsap.registerPlugin(ScrollTrigger);
 const TechStack = () => {
   useEffect(() => {
     // Animate main title and subtitle
-    gsap.fromTo('.main-title',
-      { opacity: 0, y: -50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
+    gsap.fromTo('.main-title', 
+      { opacity: 0, y: -50 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
         ease: 'power2.out',
         scrollTrigger: {
           trigger: '#techstack',
@@ -47,12 +47,12 @@ const TechStack = () => {
       }
     );
 
-    gsap.fromTo('.subtitle',
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
+    gsap.fromTo('.subtitle', 
+      { opacity: 0, y: 30 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
         delay: 0.2,
         ease: 'power2.out',
         scrollTrigger: {
@@ -66,12 +66,12 @@ const TechStack = () => {
     );
 
     // Animate category titles
-    gsap.fromTo('.category-title',
-      { opacity: 0, y: -30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
+    gsap.fromTo('.category-title', 
+      { opacity: 0, y: -30 }, 
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
         stagger: 0.2,
         scrollTrigger: {
           trigger: '#techstack',
@@ -84,13 +84,13 @@ const TechStack = () => {
     );
 
     // Animate skill icons
-    gsap.fromTo('.skill-item',
-      { opacity: 0, scale: 0.8, y: 50 },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 0.6,
+    gsap.fromTo('.skill-item', 
+      { opacity: 0, scale: 0.8, y: 50 }, 
+      { 
+        opacity: 1, 
+        scale: 1, 
+        y: 0, 
+        duration: 0.6, 
         stagger: 0.1,
         ease: 'back.out(1.7)',
         scrollTrigger: {
@@ -111,116 +111,102 @@ const TechStack = () => {
 
   return (
     <div id="techstack" className='relative z-2 bg-alt h-screen '>
-      <h1 className='bbh-bogle-regular text-center pt-13 text-6xl text-secondary main-title'>Tech stack</h1>
-      <p className='text-center nunito pt-5 text-2xl pb-5 subtitle'>Technologies and tools I use to bring ideas to life</p>
+      <h1 className='bbh-bogle-regular text-center pt-20 text-6xl text-secondary main-title'>Tech stack</h1>
+      <p className='text-center nunito pt-5 text-2xl pb-10 subtitle'>Technologies and tools I use to bring ideas to life</p>
 
       <div className='flex justify-center'>
 
-        <div className='flex flex-col gap-5 items-start pt-5'>
+        <div className='flex flex-col gap-10 items-start pt-10'>
           {/* Frontend */}
           <div className='flex gap-10 items-center justify-center'>
             <h1 className='text-3xl nunito-bold category-title'>{skillCategories[0].title}</h1>
-            <div className='flex gap-2 items-center'>
-              {skillCategories[0].skills.map((skill, index) => (
-                <div key={index} className="flex flex-col relative items-center justify-center gap-2 h-25 w-30 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_14px_var(--accent)] transition-colors cursor-pointer group skill-item ">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="h-12 w-12 mt-2 group-hover:scale-110 transition-transform"
-                  />
-                  {/* Tooltip */}
-                  <div className="text-secondary px-2 py-1 rounded text-[.8em] nunito-bold">
-                    {skill.name}
-                  </div>
+            {skillCategories[0].skills.map((skill, index) => (
+              <div key={index} className="flex flex-col relative items-center justify-center h-15 w-15 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_5px_var(--accent)] transition-colors cursor-pointer group skill-item">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
+                {/* Tooltip */}
+                <div className="absolute top-20 transform -translate-y-1/2 bg-secondary text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                  {skill.name}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* Backend */}
           <div className='flex gap-10 items-center justify-center'>
-            <h1 className='text-3xl nunito-bold category-title'>{skillCategories[1].title}</h1>
-            <div className='flex gap-2 items-center'>
-              {skillCategories[1].skills.map((skill, index) => (
-                <div key={index} className="flex flex-col relative items-center justify-center gap-2 h-25 w-30 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_14px_var(--accent)] transition-colors cursor-pointer group skill-item ">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="h-12 w-12 mt-2 group-hover:scale-110 transition-transform"
-                  />
-                  {/* Tooltip */}
-                  <div className="text-secondary px-2 py-1 rounded text-[.8em] nunito-bold">
-                    {skill.name}
-                  </div>
+            <h1 className='text-3xl nunito-bold bbh-bogle-regular category-title'>{skillCategories[1].title}</h1>
+            {skillCategories[1].skills.map((skill, index) => (
+              <div key={index} className="flex flex-col relative items-center justify-center h-15 w-15 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_5px_var(--accent)] transition-colors cursor-pointer group skill-item">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
+                {/* Tooltip */}
+                <div className="absolute top-20 transform -translate-y-1/2 bg-secondary text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                  {skill.name}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
 
 
           {/* Database */}
           <div className='flex gap-10 items-center justify-center'>
             <h1 className='text-3xl nunito-bold category-title'>{skillCategories[2].title}</h1>
-            <div className='flex gap-2 items-center'>
-              {skillCategories[2].skills.map((skill, index) => (
-                <div key={index} className="flex flex-col relative items-center justify-center gap-2 h-25 w-30 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_14px_var(--accent)] transition-colors cursor-pointer group skill-item ">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="h-12 w-12 mt-2 group-hover:scale-110 transition-transform"
-                  />
-                  {/* Tooltip */}
-                  <div className="text-secondary px-2 py-1 rounded text-[.8em] nunito-bold">
-                    {skill.name}
-                  </div>
+            {skillCategories[2].skills.map((skill, index) => (
+              <div key={index} className="flex flex-col relative items-center justify-center h-15 w-15 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_5px_var(--accent)] transition-colors cursor-pointer group skill-item">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
+                {/* Tooltip */}
+                <div className="absolute top-20 transform -translate-y-1/2 bg-secondary text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                  {skill.name}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
 
           {/* Auth */}
           <div className='flex gap-10 items-center justify-center'>
             <h1 className='text-3xl nunito-bold category-title'>{skillCategories[3].title}</h1>
-            <div className='flex gap-2 items-center'>
-              {skillCategories[3].skills.map((skill, index) => (
-                <div key={index} className="flex flex-col relative items-center justify-center gap-2 h-25 w-30 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_14px_var(--accent)] transition-colors cursor-pointer group skill-item ">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="h-12 w-12 mt-2 group-hover:scale-110 transition-transform"
-                  />
-                  {/* Tooltip */}
-                  <div className="text-secondary px-2 py-1 rounded text-[.8em] nunito-bold">
-                    {skill.name}
-                  </div>
+            {skillCategories[3].skills.map((skill, index) => (
+              <div key={index} className="flex flex-col relative items-center justify-center h-15 w-15 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_5px_var(--accent)] transition-colors cursor-pointer group skill-item">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
+                {/* Tooltip */}
+                <div className="absolute top-20 transform -translate-y-1/2 bg-secondary text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                  {skill.name}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
 
           {/* Tools */}
           <div className='flex gap-10 items-center justify-center'>
             <h1 className='text-3xl nunito-bold category-title'>{skillCategories[4].title}</h1>
-            <div className='flex gap-2 items-center'>
-              {skillCategories[4].skills.map((skill, index) => (
-                <div key={index} className="flex flex-col relative items-center justify-center gap-2 h-25 w-30 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_14px_var(--accent)] transition-colors cursor-pointer group skill-item ">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="h-12 w-12 mt-2 group-hover:scale-110 transition-transform"
-                  />
-                  {/* Tooltip */}
-                  <div className="text-secondary px-2 py-1 rounded text-[.8em] nunito-bold">
-                    {skill.name}
-                  </div>
+            {skillCategories[4].skills.map((skill, index) => (
+              <div key={index} className="flex flex-col relative items-center justify-center h-15 w-15 bg-gray-50 rounded-xl hover:bg-gray-100 shadow-lg hover:shadow-[0_0_5px_var(--accent)] transition-colors cursor-pointer group skill-item">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
+                {/* Tooltip */}
+                <div className="absolute top-20 transform -translate-y-1/2 bg-secondary text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                  {skill.name}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-
 
         </div>
       </div>
